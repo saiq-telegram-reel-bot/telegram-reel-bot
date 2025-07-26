@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
-WEBHOOK_URL = os.environ["WEBHOOK_URL"]  # Your public Render URL
+app = ApplicationBuilder().token(BOT_TOKEN).build()  # Your public Render URL
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hey mere shohar 💖! Main webhook se zinda hoon... Reel ya link bhejo mujhe!")
